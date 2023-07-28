@@ -21,10 +21,10 @@ apply plugin: 'org.spongepowered.mixin'
 
 version = "${mc_version}-${mod_version}"
 if (System.getenv("DEV") == "true") {
-	version = "${mc_version}-${mod_version}-dev-byphantomjl"
+	version = "${mc_version}-${mod_version}-dev-phantommed"
 }
 if (System.getenv("CI") == "true") {
-	version = "${mc_version}-nightly-${getGitHash()}"
+	version = "${mc_version}-nightly-phantommed"
 }
 
 group = 'com.workert.robotics'
