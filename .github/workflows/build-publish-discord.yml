@@ -59,16 +59,3 @@ jobs:
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Send built file to discord
-        if: github.event_name == 'push'
-        uses: sinshutu/upload-to-discord@master
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-        with:
-          args: ./build/libs/*.*
-
-#            - name: Archive Artifacts
-#              uses: actions/upload-artifact@v3
-#              with:
-#                  name: createrobotics-${{ steps.get_mc_version.outputs.mc_version }}-nightly-${{ steps.get_hash.outputs.sha_short }}
-#                  path: build/libs/
